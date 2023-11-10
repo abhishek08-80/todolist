@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List </title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="box">
+                <h2><i class="fa-solid fa-list"></i> My To Do List</h2>
+
+                <input type="text" placeholder="Add a new task" id="inputField" />
+                <input type="button" value="Add" class="btn" onclick="addTask()" />
+                <input type="button" value="All Clear" class="btn2" onclick="removeTask()" />
+                <ul id="ul">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+
+
+
+        let inputvalue = document.getElementById("inputField");
+
+        function removeTask() {
+            let clr = document.getElementById("ul");
+            clr.innerHTML = '';
+        }
+
+
+        function addTask() {
+            if (!inputvalue.value) {
+            } else {
+                let inputvalue = document.getElementById("inputField");
+                let ul = document.getElementById("ul");
+                let li = document.createElement("li");
+                let checkbox = document.createElement("input")
+                checkbox.type = "checkbox";
+                checkbox.name = "name";
+                checkbox.value = "value";
+                checkbox.id = "checkbox";
+                ul.appendChild(li);
+
+                li.appendChild(checkbox);
+                li.innerHTML = inputvalue.value
+                inputvalue.value = '';
+
+                let btn3 = document.createElement("button");
+                btn3.textContent = "✓";
+                btn3.className = "btn3";
+                btn3.addEventListener("click", function () {
+                    li.classList.toggle("completed");
+                });
+                li.appendChild(btn3);
+
+                if (ul.firstChild) {
+                    ul.insertBefore(li, ul.firstChild);
+                } else {
+                    ul.appendChild(li);
+                }
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

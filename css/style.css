@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ralewaybold;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient( rgb(93, 100, 107),rgb(26, 26, 25));
+    color: aliceblue;
+}
+
+.box{
+    position: relative;
+    background-color: rebeccapurple;
+    width: 80vh;
+    height: auto;
+    box-shadow: 0px 0px 40px rgb(205, 205, 205);
+    border-radius: 35px;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+h2{
+    line-height: 80px;
+}
+
+#inputField{
+    position: relative;
+    width: 80%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;   
+}
+.btn{
+    margin-top: 20px;
+    width: 20%;
+    border-radius: 0px 20px;
+    padding: 7px;
+    margin-right: 50px;
+    background-color: rgb(21, 107, 21);
+    color: aliceblue;
+}
+.btn2{
+    width: 20%;
+    border-radius: 20px 0px;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(192, 42, 42);
+}
+
+    .btn3 {
+        width: 38px;
+        border-radius: 50%;
+        background-color: rgb(21, 107, 21);
+        color: aliceblue;
+        height: 38px;
+        margin-right: -10px;
+    }
+.btn2:hover{
+    background-color: darkgrey;
+    color: red;
+}
+.btn:hover{
+    background-color: darkgrey;
+    color: rgb(20, 124, 20);
+}
+.btn3:hover{
+    background-color: darkgrey;
+    color: rgb(20, 124, 20);
+}
+ul li {
+    list-style: none;
+    padding: 0px 12px;
+    background-color: rgb(231, 231, 231);
+    width: 75%;
+    margin: 0px auto;
+    border-radius: 40px;
+    color: rebeccapurple;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: #555;
+  }
+
